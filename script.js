@@ -1,4 +1,3 @@
-
 // 1 -Que tal uma dificuldade um pouco maior? Imprima todos os números entre 30 e 40 (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos! No final escreva a palavra "FIM". Use o while para essa tarefa. DICA: o if pode ajudá-lo!
 // let contador = 30;
 
@@ -25,31 +24,26 @@
 // contador = contador -1;
 // }
 
+// function pulaLinha() {
+//     document.write("<br>");
+// }
 
-    // function pulaLinha() {
-    //     document.write("<br>");
-    // }
+// function mostra(frase) {
 
-    // function mostra(frase) {
+//     document.write(frase);
+//     pulaLinha();
+// }
 
-    //     document.write(frase);
-    //     pulaLinha();
-    // }
+// var anoCopa = 1930;
+// var limite = parseInt(prompt("Qual é o ano limite?"));
 
-    // var anoCopa = 1930;
-    // var limite = parseInt(prompt("Qual é o ano limite?"));
+// while(anoCopa <= limite) {
 
-    // while(anoCopa <= limite) {
+//     mostra(anoCopa + " tem copa!");
+//     anoCopa = anoCopa + 4;
+// }
 
-    //     mostra(anoCopa + " tem copa!");
-    //     anoCopa = anoCopa + 4;
-    // }
-
-
-
-    // mostra("Ufa! Esses foram os anos de copa até " + limite);
-
-    
+// mostra("Ufa! Esses foram os anos de copa até " + limite);
 
 //     var loginCadastrado = "alura";
 //     var senhaCadastrada = "alura321";
@@ -83,20 +77,69 @@
 // var idade = parseInt(prompt("Digite sua idade"));
 
 // while(isNaN(idade)) {
-//     idade = parseInt(prompt("Digite sua idade"));    
+//     idade = parseInt(prompt("Digite sua idade"));
 // }
 
 // alert(idade);
 
-// var tabuada = 7;
-
 // for(var i = 1; i <= 10; i +=1){
-//     document.write(tabuada*[i] + ("<br>"));
+//     document.write(7* i + ("<br>" +"<br>"));
 
 // }
 
+// var index = 0;
+// while( index <= 10){
+//     document.write(index *2 + "<br>")
+//     index +=1;
+// }
 
+//     function pulaLinha() {
 
+//         document.write("<br>");
+//     }
 
-    
+//     function mostra(frase) {
 
+//         document.write(frase);
+//         pulaLinha();
+//     }
+
+//    var totalfamiliares = parseInt(prompt("quantidade de familiares? "));
+//    var contador = 1;
+//     var totalIdades = 0;
+
+// while(contador <= totalfamiliares){
+//     var idade = parseInt(prompt("Qual a idade do familiar?"));
+//     totalIdades = totalIdades + idade;
+//     contador++;
+// }
+//     var media = totalIdades/totalfamiliares;
+//     mostra("A media é "+media);
+
+function pulaLinha() {
+  document.write("<br>");
+}
+
+function mostra(frase) {
+  document.write(frase);
+  pulaLinha();
+}
+
+for (var linha = 1; linha <= 5; linha += 1) {
+  for (var coluna = 1; coluna <= 10; coluna += 1) {
+    document.write("*" + " ");
+  }
+  pulaLinha();
+}
+
+var segredo = 5;
+var input = document.querySelector("input");
+function verifica() {
+  if (input.value == segredo) {
+    alert("Você acertou!!!");
+  } else {
+    alert("Você ERROU!!!!!");
+  }
+}
+var button = document.querySelector("button");
+button.onclick = verifica;
