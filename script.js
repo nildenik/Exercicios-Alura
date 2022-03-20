@@ -116,23 +116,23 @@
 //     var media = totalIdades/totalfamiliares;
 //     mostra("A media é "+media);
 
-function pulaLinha() {
-  document.write("<br>");
-}
+// function pulaLinha() {
+//   document.write("<br>");
+// }
 
-function mostra(frase) {
-  document.write(frase);
-  pulaLinha();
-}
+// function mostra(frase) {
+//   document.write(frase);
+//   pulaLinha();
+// }
 
-for (var linha = 1; linha <= 5; linha += 1) {
-  for (var coluna = 1; coluna <= 10; coluna += 1) {
-    document.write("*" + " ");
-  }
-  pulaLinha();
-}
+// for (var linha = 1; linha <= 5; linha += 1) {
+//   for (var coluna = 1; coluna <= 10; coluna += 1) {
+//     document.write("*" + " ");
+//   }
+//   pulaLinha();
+// }
 
-var segredo = 5;
+var segredo = Math.round(Math.random() *10);
 var input = document.querySelector("input");
 function verifica() {
   if (input.value == segredo) {
@@ -140,6 +140,8 @@ function verifica() {
   } else {
     alert("Você ERROU!!!!!");
   }
+  input.value = "";
+  input.focus();
 }
 var button = document.querySelector("button");
 button.onclick = verifica;
