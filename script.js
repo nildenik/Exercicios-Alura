@@ -132,16 +132,27 @@
 //   pulaLinha();
 // }
 
-var segredo = Math.round(Math.random() *10);
+var segredos = [7,6,3,10];
 var input = document.querySelector("input");
+
+input.focus();
+
 function verifica() {
-  if (input.value == segredo) {
-    alert("Você acertou!!!");
-  } else {
-    alert("Você ERROU!!!!!");
+    var achou = false;
+    for (var posição = 0; posição < segredos.length; posição +=1){
+
+    if (input.value == segredos[posição]) {
+      alert("Você ACERTOU!!!");
+      achou = true;
+      break; 
+    } 
+    }
+    if(achou == false){
+      alert("Você ERROU!!!!")
+    }
+    input.value = "";
+    input.focus();
   }
-  input.value = "";
-  input.focus();
-}
+
 var button = document.querySelector("button");
 button.onclick = verifica;
