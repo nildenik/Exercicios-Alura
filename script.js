@@ -116,30 +116,43 @@
 //     var media = totalIdades/totalfamiliares;
 //     mostra("A media é "+media);
 
-function pulaLinha() {
-  document.write("<br>");
-}
+// function pulaLinha() {
+//   document.write("<br>");
+// }
 
-function mostra(frase) {
-  document.write(frase);
-  pulaLinha();
-}
+// function mostra(frase) {
+//   document.write(frase);
+//   pulaLinha();
+// }
 
-for (var linha = 1; linha <= 5; linha += 1) {
-  for (var coluna = 1; coluna <= 10; coluna += 1) {
-    document.write("*" + " ");
-  }
-  pulaLinha();
-}
+// for (var linha = 1; linha <= 5; linha += 1) {
+//   for (var coluna = 1; coluna <= 10; coluna += 1) {
+//     document.write("*" + " ");
+//   }
+//   pulaLinha();
+// }
 
-var segredo = 5;
+var segredos = [7,6,3,10];
 var input = document.querySelector("input");
+
+input.focus();
+
 function verifica() {
-  if (input.value == segredo) {
-    alert("Você acertou!!!");
-  } else {
-    alert("Você ERROU!!!!!");
+    var achou = false;
+    for (var posição = 0; posição < segredos.length; posição +=1){
+
+    if (input.value == segredos[posição]) {
+      alert("Você ACERTOU!!!");
+      achou = true;
+      break; 
+    } 
+    }
+    if(achou == false){
+      alert("Você ERROU!!!!")
+    }
+    input.value = "";
+    input.focus();
   }
-}
+
 var button = document.querySelector("button");
 button.onclick = verifica;
